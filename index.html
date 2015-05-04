@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Tapi-codegen by Pazus</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Tapi-codegen</h1>
+        <p>PL/SQL Table API Generator</p>
+
+        <p class="view"><a href="https://github.com/Pazus/TAPI-Codegen">View the Project on GitHub <small>Pazus/TAPI-Codegen</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Pazus/TAPI-Codegen/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Pazus/TAPI-Codegen/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Pazus/TAPI-Codegen">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="tapi-codegen" class="anchor" href="#tapi-codegen" aria-hidden="true"><span class="octicon octicon-link"></span></a>TAPI-Codegen</h1>
+
+<p>PL/SQL Table API Generator</p>
+
+<p>Package to generate the rich Table API for Oracle.</p>
+
+<h2>
+<a id="key-features" class="anchor" href="#key-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Key features:</h2>
+
+<ul>
+<li>DML operation procedures</li>
+<li>Data retrieval funcions for the whole table record or ID by ROWID, primary key or any nonfunctional unique indexes</li>
+<li>Bulk DML operations</li>
+<li>Insert from cursor</li>
+<li>Record type for the table with default values</li>
+<li>Dynamic primary key generation from sequence</li>
+</ul>
+
+<h2>
+<a id="example-of-usage" class="anchor" href="#example-of-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example of usage</h2>
+
+<p>To generate API package for a table execute:</p>
+
+<pre><code>    :c := tapi_codegen.gen_package_for_table(par_owner =&gt; USER, par_table_name =&gt; 'TAPI_TEST_1');
+</code></pre>
+
+<p>Package code is returned as CLOB (:c).</p>
+
+<p>You can generate and compile the package automaticaly by executing</p>
+
+<pre><code>    tapi_codegen.generate_and_compile(par_owner =&gt; USER, par_table_name =&gt; 'TAPI_TEST_1');
+</code></pre>
+
+<h2>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO:</h2>
+
+<ul>
+<li>Bulk DML api with exception handling</li>
+<li>Multilevel entities with primary key as foreign key</li>
+<li>Custom exception handling block</li>
+<li>Cursors for retrieval by columns with foreign key</li>
+</ul>
+
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<p>The authors of TAPI-Codegen are</p>
+
+<ul>
+<li>Pavel Kaplya (<a href="http://github.com/pazus">Pazus</a>)</li>
+<li>Artur Baytin</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>See the (<a href="https://github.com/Pazus/TAPI-Codegen/blob/master/LICENSE">LICENSE</a>) file for license rights and limitations .</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Pazus">Pazus</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-62572875-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
